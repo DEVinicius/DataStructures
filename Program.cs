@@ -1,10 +1,12 @@
-﻿using DataStructure.All.LinkedList;
+﻿using DataStructure.All.MusicQueue;
+using Implementation = DataStructure.All.LinkedList.Implementation;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        LinkedListImplementation();
+        // LinkedListImplementation();
+        MusicQueueImplementation();
     }
 
     public static void LinkedListImplementation()
@@ -36,5 +38,21 @@ public class Program
 
 
         linkedListImplementation.ListImplementation(linkedListImplementation.Head);
+    }
+
+    public static void MusicQueueImplementation()
+    {
+        var queueMusic = new DataStructure.All.MusicQueue.Implementation();
+        
+        
+        queueMusic.AddNewMusic("Charlie Puth", "One Call Away");
+        queueMusic.AddNewMusic("Charlie Puth", "Marvin Gaye");
+        
+        queueMusic.ListMusicQueue();
+        
+        queueMusic.AddNewMusic("Anne-Marie", "2002");
+        queueMusic.ListMusicQueue();
+        
+        queueMusic.RemoveMusic();
     }
 }
